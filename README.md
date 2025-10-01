@@ -62,7 +62,7 @@ _(This project uses only Python standard libraries, so `requirements.txt` may no
 Run the model from the command line:
 
 ```bash
-python ngram_model.py --train data/train.txt --validation data/valid.txt --n 2 --smoothing laplace
+python n_gram.py --train data/train.txt --validation data/valid.txt --n 2 --smoothing laplace
 ```
 
 ### Arguments
@@ -82,7 +82,7 @@ python ngram_model.py --train data/train.txt --validation data/valid.txt --n 2 -
 Training a bigram model with Laplace smoothing:
 
 ```bash
-python ngram_model.py \
+python n_gram.py \
     --train data/train.txt \
     --validation data/valid.txt \
     --n 2 \
