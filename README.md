@@ -49,12 +49,6 @@ cd CS6320-Group-14-A-1
 
 Ensure you have **Python 3.8+** installed. Install any required dependencies:
 
-```bash
-pip install -r requirements.txt
-```
-
-_(This project uses only Python standard libraries, so `requirements.txt` may not be necessary.)_
-
 ---
 
 ## Usage
@@ -82,29 +76,28 @@ python n_gram.py --train data/train.txt --validation data/valid.txt --n 2 --smoo
 Training a bigram model with Laplace smoothing:
 
 ```bash
-python n_gram.py \
-    --train data/train.txt \
-    --validation data/valid.txt \
-    --n 2 \
-    --smoothing laplace
+python n_gram.py --train DATASET\train.txt --validation DATASET\val.txt --n 2 --smoothing none
 ```
 
 Example output:
 
 ```
-Training 2-gram model...
+TTraining 2-gram model...
 First pass: counting word frequencies...
-Vocabulary size: 5421
+Vocabulary size: 6323
 Second pass: collecting n-gram counts...
-Total n-grams collected: 48000
-Total contexts collected: 35000
+Total n-grams collected: 38377
+Total contexts collected: 6321
 Calculating perplexity...
 
-Perplexity on validation set: 212.47
+Perplexity on validation set: 33172.01
 
 Example probability calculations:
-P(hotel|the) = 0.004512
-P(was|hotel) = 0.002134
+P(hotel|the) = 0.078028
+P(was|hotel) = 0.055126
+P(good|was) = 0.007667
+P(the|<s>) = 0.093750
+P(</s>|good) = 0.000000
 ```
 
 ---
